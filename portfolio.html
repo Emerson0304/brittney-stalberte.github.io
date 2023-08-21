@@ -4,8 +4,8 @@
       <title> Brittney's Amazing Website</title>
       <style type="text/css">
         body {
-            background: rgb(125, 198, 205);
-            color: rgb(45, 45, 45);
+            background: rgba(0, 0, 0, 0.932);
+            color: rgba(85, 10, 172, 0.829);
             padding: 10px;
             font-family: arial;
         }
@@ -23,8 +23,9 @@
 
         /* navigation menu */
         nav {
-            background: rgb(239, 80, 41);
+            background: rgb(0, 0, 0);
             margin: 0 auto;
+            margin-bottom: 20px;
             display: flex;
             padding: 10px;
         }
@@ -48,15 +49,15 @@
 
         /* main container area beneath menu */
         main {
-            background: rgb(245, 238, 219);
+            background: rgba(181, 153, 11, 0.845);
             display: flex;
         }
         .content {
             flex: 1;
             padding: 15px;
         }
-         /* portfolio styles */
-         #portfolio {
+        /* portfolio styles */
+        #portfolio {
                 list-style-type: none;
                 padding-left: 0;
             }
@@ -69,20 +70,34 @@
             }
             
             #portfolio li:hover {
-                background: #eee;
+                background: #720303;
             } 
             
             #portfolio a {
                 text-decoration: none;
                 color: #454545;
             }
-        
     </style>
     </head>
 
     <body>
       <div id="all-contents">
-      
+        <nav>
+          <header>Brittney's Glorious Website</header>
+          <ul>
+              <li><a href="index.html">Home</a>
+              </li>
+              <li><a href="portfolio.html">Portfolio</a>
+              </li>
+          </ul>
+      </nav>
+      <main>
+        <div class="content">
+          <h1>Portfolio</h1>
+          <ul id="portfolio">
+          </ul>
+      </div> 
+      </main>
       </div>
     </body>
 </html>
