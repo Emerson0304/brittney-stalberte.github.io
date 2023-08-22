@@ -23,6 +23,7 @@ var animal = {};
 
 // Using **dot notation** give `animal` a **property** named `species` with a value of any animal species.
 animal.species = 'Rabbit';
+
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -34,7 +35,7 @@ animal['name'] = 'Benji';
  * Step 4 - Review
  *
  * 1. What are the different ways you can access properties on objects?
- *
+ *  
  * 2. What are the different ways of accessing elements on arrays?
  *
  * *******************************************************************

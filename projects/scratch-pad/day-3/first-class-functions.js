@@ -121,7 +121,7 @@ function allStringsPass(strings, test) {// test is a function
     // YOUR CODE BELOW HERE //
   
    
-    
+        
 
    
 
