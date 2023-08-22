@@ -14,22 +14,35 @@
 
 //Create a variable named `animal` and assign it to an empty object.
 var animal = {};
-
-
+//Using **dot notation** give `animal` a **property** named `species` with a value of any animal species.
+animal.species = 'Rabbit';
+//Using **bracket notation** give `animal` a **property** called `name` with a value of your animal`s name.
+animal['name'] = 'Benji';
+//Using either notation, give `animal` a **property** called `noises` with a value of empty array.
+animal.noises = [];
+//Print your `animal` Object to the console by adding, `console.log(animal);
+console.log(animal);
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-// Using **dot notation** give `animal` a **property** named `species` with a value of any animal species.
-animal.species = 'Rabbit';
+//Create a variable named `noises` and assign it to an empty array.
+var noises = [];
+// Using **bracket notation** give `noises` it's first element. A string representing a sound your animal might make.
+noises[0] = 'none';
+//Using an array function add another noise to the end of `noises`.
+noises.push('makes no sound');
+noises.unshift('quiet');
+noises[noises.length] = 'silent';
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Using **bracket notation** give `animal` a **property** called `name` with a value of your animal`s name.
-animal['name'] = 'Benji';
+
 
 /* *******************************************************************
  * Step 4 - Review
@@ -54,16 +67,14 @@ animal['name'] = 'Benji';
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Using either notation, give `animal` a **property** called `noises` with a value of empty array.
-animal.noises = [];
+
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Print your `animal` Object to the console by adding, `console.log(animal);
-console.log(animal);
+
 
 
 /**
