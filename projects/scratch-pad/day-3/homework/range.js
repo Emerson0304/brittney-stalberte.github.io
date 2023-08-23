@@ -23,32 +23,24 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    if(start > end){
-        [start, end] = [end, start];
-    }
-    let result = [];
+
+
+    const result = [];
+
     for(let i = start; i <= end; i++){
         result.push(i);
     }
-    if(end > start){
-        result.reverse();
-    }
-    return result;
-    }
 
-    let resultArray = range(8, 14);
-    console.log(resultArray);
+return result;
 
-    let reversedResultArray = range(14, 8)
-    console.log(reversedResultArray)
+    
     // YOUR CODE GOES ABOVE HERE //
 
 
 
 
 
-
+}
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
    (typeof process.versions.node !== 'undefined')) {

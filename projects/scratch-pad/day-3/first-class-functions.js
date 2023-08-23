@@ -57,11 +57,16 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
+    return function(inputStrings){
+        if(inputStrings.charAt(0) === startsWith){
+            return true;
+        }
+        return false;
+    };
+
     
-    
-   return function(inputString){
-        return inputString.startsWith(startsWith)
-   };
+   
+
     
     
     
@@ -78,9 +83,14 @@ function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
     
-        return function(endsWithString){
-    return string.endsWith(endsWithString);
+    return function(inputString){
+        if(inputString.charAt(inputString.length - 1) === endsWith){
+            return true;
         }
+    return false;
+    
+    }
+
     
     
     
@@ -121,6 +131,12 @@ function allStringsPass(strings, test) {// test is a function
     // YOUR CODE BELOW HERE //
   
    
+    for(const str of strings){
+        if(!test(str)){
+            return false;
+        }
+    }
+        return true;
 
 
 
@@ -129,7 +145,7 @@ function allStringsPass(strings, test) {// test is a function
 
 
 
-
+    
 
     
     // YOUR CODE ABOVE HERE //
