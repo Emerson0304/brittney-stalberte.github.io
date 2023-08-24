@@ -53,10 +53,10 @@ var animal ={
   name: 'Lonnie',
   noises: []
 }
-
-animal['noises'] = [];
-animal.noises.push();
+// Initialize the noises array with the expected values.
+animal['noises'] = noises
 console.log(animal);
+noises.push('')
 
 
 
@@ -129,6 +129,28 @@ console.log(animals.length);
 
 /*I am deciding to go with an array to store the list of friends because it provides an ordered collection 
 that can easily hold multiple items and is well-suited for a simple list of elements */
+
+//Create a variable called firends.
+var friends = [];
+//Create a function called getRandom that takes the animals array and returns a random index.
+function getRandom(arr){
+  return Math.floor(Math.random() * arr.length);
+}
+//Get a random animal and add its name to friends.
+var randomIndex = getRandom(animals);
+var randomAnimal = animals[randomIndex];
+friends.push(randomAnimal.name);
+
+//print firends to the console.
+console.log(friends);
+
+//using bracket notation, add the friends list as a property also named friends on one of the aniamls array.
+var randomAnimalIndex = getRandom(animals);
+animals[randomAnimalIndex]['friends'] = friends;
+
+//log to check work.
+console.log(animals);
+
 
 
 /**

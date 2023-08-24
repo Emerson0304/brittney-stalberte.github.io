@@ -26,21 +26,18 @@ function range(start, end) {
 
 
     const result = [];
-
-    for(let i = start; i <= end; i++){
+    for (let i = start; i <= end; i++){
         result.push(i);
     }
-
-return result;
-
-    
+    return result;
+} 
     // YOUR CODE GOES ABOVE HERE //
 
 
 
 
 
-}
+
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
    (typeof process.versions.node !== 'undefined')) {

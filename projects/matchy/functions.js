@@ -7,15 +7,16 @@
  *
  * See the README for detailed instructions,
  * and read every instruction carefully.
- */
+ *///const { animal } = require("./data");
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-function search(animals, tragetAnimal){
+function search(animals, findAnimal){
     for(var i = 0; i < animals.length; i++){
-        if(animals[i].name === targetAnimal){
+        if(animals[i].name === findAnimal){
             return animals[i];
         }
     }
@@ -26,19 +27,36 @@ function search(animals, tragetAnimal){
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function replace(animals, name, replacement){
+    let index = animals.findIndex(animal => animal.name === name)
+    if(index !== -1){
+     animals[index] = replacement;  
+    }
+}
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
-
+function remove(animals, name){
+    let index = animals.findIndex(animal => animal.name === name)
+    if(index !== -1){
+        animals.splice(index, 1)
+    }
+    }
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+function add(aniaml, aimals){
+// check if the animal object has a name property with a length > 0.
+if(!animal.name || animal.name.length == 0);
+console.log("Animal's name is missing or empty.")
+return;
+}
 
-
+if(!animal.species.length === 0){
+    
+}
 
 /**
  * You did it! You're all done with Matchy!

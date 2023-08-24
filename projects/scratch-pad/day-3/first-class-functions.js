@@ -56,18 +56,25 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+   
+    // return a function that test wether a string startsWith character.
     return function(inputStrings){
-        if(inputStrings.charAt(0) === startsWith){
+    
+        if(inputStrings.charAt(0).toUpperCase() === startsWith){
             return true;
         }
-        return false;
+        else if(inputStrings.charAt(0).toLowerCase() === startsWith){
+            return true;
+        }else{
+            return false;
+        }
+        
     };
 
-    
-   
 
-    
+
+
+
     
     
     
@@ -81,18 +88,16 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    return function(inputString){
-        if(inputString.charAt(inputString.length - 1) === endsWith){
-            return true;
-        }
-    return false;
-    
+
+    return function (inputString){
+        const endingChar = inputString.charAt(inputString.length - 1);
+        return endingChar.toLowerCase() === endsWith.toLowerCase();
+     
+        
     }
 
-    
-    
+
+
     
     // YOUR CODE ABOVE HERE //
 }
@@ -130,13 +135,14 @@ for(let str of strings){
 function allStringsPass(strings, test) {// test is a function
     // YOUR CODE BELOW HERE //
   
-   
-    for(const str of strings){
-        if(!test(str)){
-            return false;
-        }
+   for(const str of strings){
+    if(!test(str)){
+        return false;
     }
-        return true;
+
+   }
+   return true;
+
 
 
 
