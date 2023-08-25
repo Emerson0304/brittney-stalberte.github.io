@@ -54,35 +54,36 @@ function makeContactList() {
         length: function() {
             return contacts.length;
         },
-
+    
         addContact: function(contact){
             contacts.push(contact);
-        },
-        findContact: function(fullName){
-    const fullNameArray = fullName.split(' ');
-    const searchFirst = fullNameArray.slice(0, 1).join(' ')
-    const searchLast = fullNameArray.slice(-1).join(' ')  
 
-    return contacts.find(contact => contact.nameFirst === searchFirst && contact.nameLast === searchLast);
+    },
+        findContact: function(fullName) {
+            const [firstName, lastName] = fullName.split(' ');
+    return contacts.find(contact => contact.nameFirst  === firstName && contact.nameLast === lastName);
 },
 
-removeContact: function (contact){
-    const index = contacts.findIndex(c => c.id === contact.id);
-    if(index !== -1){
+
+removeContact: function (contact) {
+    const index = contacts.indexOf(contact);
+    if(index !== -1) {
         contacts.splice(index, 1);
     }
-  },
+},
 
   printAllContactNames: function (){
-    return contacts.map(contact => '${contact.nameFirst} ${contact.nameLast}').join('\n')
+    const names = contacts.map(contacts => `${contacts.nameFirst} ${contacts.nameLast}`).join('\n')
+    return names;
   }
-};
+
+
 }
-
-
-
+}
+    
 
 // YOUR CODE GOES ABOVE HERE //
+    
 
 
 
