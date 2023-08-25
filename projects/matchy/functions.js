@@ -9,6 +9,8 @@
  * and read every instruction carefully.
  *///const { animal } = require("./data");
 
+const { animal, animals } = require("./data");
+
 
 
 //////////////////////////////////////////////////////////////////////
@@ -47,16 +49,29 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-function add(aniaml, aimals){
+function add(animal, animals){
 // check if the animal object has a name property with a length > 0.
-if(!animal.name || animal.name.length == 0);
-console.log("Animal's name is missing or empty.")
+if(!animal.name || animal.name.length == 0)
+console.log("Animal must have a length greater than 0.")
 return;
 }
 
-if(!animal.species.length === 0){
-    
+if(!animal.species || animal.species.length === 0){
+console.log("Animal species must have a length greater than 0.")
+return;
 }
+
+for(let existingAnimal of animals){
+    if(existingAnimal.name === animal.name){
+        console.log("An animal with this name already exists.")
+        return;
+    }
+ animals.push(animal);
+ console.log("Animal added successfully", animal)
+
+}
+
+
 
 /**
  * You did it! You're all done with Matchy!
