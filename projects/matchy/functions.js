@@ -8,8 +8,7 @@
  * See the README for detailed instructions,
  * and read every instruction carefully.
  *///const { animal } = require("./data");
-
-const { animal, animals } = require("./data");
+//const { animal, animals } = require("./data");
 
 
 
@@ -51,28 +50,29 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 function add(animal, animals){
 // check if the animal object has a name property with a length > 0.
-if(!animal.name || animal.name.length == 0)
-console.log("Animal must have a length greater than 0.")
-return;
-}
+ if(!animal.name || animal.name.length === 0){
+    console.log("Animal must have a valid name.");
+    return;
+ }
+    //check to see if the animal object has a species property.
 
-if(!animal.species || animal.species.length === 0){
-console.log("Animal species must have a length greater than 0.")
-return;
-}
+ if(!animal.species || animal.species.length === 0){
+    console.log("Animal must have a valid species.")
+    return;
+ }
 
-for(let existingAnimal of animals){
-    if(existingAnimal.name === animal.name){
-        console.log("An animal with this name already exists.")
+var isAGreatName = animals.every(function(existingAnimal){
+    return existingAnimal.name !== animal.name;
+ });
+
+    if(!isUn){
+        console.log("Animal name must be unique.");
         return;
     }
- animals.push(animal);
- console.log("Animal added successfully", animal)
 
-}
-
-
-
+    animals.push(animal);
+    console.log("Animal name must be unique.")
+    }
 /**
  * You did it! You're all done with Matchy!
  */
