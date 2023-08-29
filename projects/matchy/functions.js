@@ -65,7 +65,7 @@ var isAGreatName = animals.every(function(existingAnimal){
     return existingAnimal.name !== animal.name;
  });
 
-    if(!isUn){
+    if(!isAGreatName){
         console.log("Animal name must be unique.");
         return;
     }
