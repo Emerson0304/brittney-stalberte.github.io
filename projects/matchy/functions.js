@@ -61,7 +61,7 @@ function add(animal, animals){
     return;
  }
 
-var isAGreatName = animals.every(function(existingAnimal){
+    var isAGreatName = animals.every(function(existingAnimal){
     return existingAnimal.name !== animal.name;
  });
 
@@ -71,7 +71,7 @@ var isAGreatName = animals.every(function(existingAnimal){
     }
 
     animals.push(animal);
-    console.log("Animal name must be unique.")
+    console.log("Added the new animal to the collection.")
     }
 /**
  * You did it! You're all done with Matchy!
