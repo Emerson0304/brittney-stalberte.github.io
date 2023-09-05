@@ -51,28 +51,14 @@ function remove(animals, name){
 function add(animal, animals){
 // check if the animal object has a name property with a length > 0.
  if(!animal.name || animal.name.length === 0){
-    console.log("Animal must have a valid name.");
-    return;
- }
-    //check to see if the animal object has a species property.
+    return false;
 
- if(!animal.species || animal.species.length === 0){
-    console.log("Animal must have a valid species.")
-    return;
- }
-
-    var isAGreatName = animals.every(function(existingAnimal){
-    return existingAnimal.name !== animal.name;
- });
-
-    if(!isAGreatName){
-        console.log("Animal name must be unique.");
-        return;
+} else if (Object.getOwnPropertyNames('species') && animal.species.length > 0){
+      return false;  
     }
-
-    animals.push(animal);
-    console.log("Added the new animal to the collection.")
-    }
+}
+ 
+    
 /**
  * You did it! You're all done with Matchy!
  */

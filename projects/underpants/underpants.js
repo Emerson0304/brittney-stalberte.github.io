@@ -297,8 +297,12 @@ _.each = function(collection, func){
 * Examples:
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
+_.reduce = function(array, func, seed){
 
+}
 
+//Example 1
+_.reduc=\
 /** _.extend
 * Arguments:
 *   1) An Object
